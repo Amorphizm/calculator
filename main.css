@@ -1,0 +1,50 @@
+button {
+    display: inline-block;
+    padding: 25px;
+    width: 100%;
+    text-align: center;
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-size: 25px;
+    font-family: fantasy;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#calc {
+    text-align: center;
+    padding: 20px;
+    background-color: #cccccc;
+    border-radius: 10px;
+}
+
+caption {
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: fantasy;
+    font-size: 35px;
+    text-align: right;
+}
+
+table {
+    margin: auto;
+}
+
+.active {
+    background-color: red;
+}
