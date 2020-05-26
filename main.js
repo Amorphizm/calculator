@@ -1,6 +1,7 @@
 let output = document.getElementById('screen');
 var elements = document.getElementsByTagName('button');
 var que = [];
+var button_order = [];
 
 // function for calculating values
 function calculate(output, que) {
@@ -78,11 +79,21 @@ function operate(selected, elements, que, output) {
    return que
 }
 
+function update_order(button_order, selected) {
+    if (button_order.length == 2) {
+        button_order[0] = button_order[1]
+        button_order[1] = selected
+    } else {
+        button_order = button_order.push(selected)
+    }
+    return button_order
+}
+
 // add event listeners to all buttons
 for (i = 0; i < elements.length; i++) {
    if (elements[i].id == 'calculate') {
        elements[i].addEventListener("click", function () {
-           calculate(output, que);
+           calculate(output, que)
            clearActive(elements)
        });
    } else if (elements[i].id == 'clear') {
@@ -94,12 +105,16 @@ for (i = 0; i < elements.length; i++) {
    } else if (elements[i].id == 'operator') {
        let selected = elements[i];
        elements[i].addEventListener("click", function () {
-           operate(selected, elements, que, output);
+           update_order(button_order, selected)
+           if (button_order[0] !== button_order[1]) {
+                operate(selected, elements, que, output)
+           }
        })
    } else {
        let text = elements[i].innerHTML;
        elements[i].addEventListener("click", function () {
-           display(output, text, elements);
+           update_order(button_order, elements[i])
+           display(output, text, elements)
        });
    }
 }
