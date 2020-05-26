@@ -6,7 +6,7 @@ button {
     table-layout: fixed;
     border-collapse: collapse;
     font-size: 25px;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: sans-serif, 'Noto Sans JP';
 }
 
 button:hover {
@@ -38,7 +38,7 @@ input {
     margin-bottom: 10px;
     font-size: 35px;
     text-align: right;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: sans-serif, 'Noto Sans JP';
 }
 
 table {

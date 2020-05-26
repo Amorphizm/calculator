@@ -102,4 +102,4 @@ for (i = 0; i < elements.length; i++) {
            display(output, text, elements);
        });
    }
-}ss
+}
