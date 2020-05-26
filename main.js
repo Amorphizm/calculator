@@ -115,6 +115,7 @@ for (i = 0; i < elements.length; i++) {
        elements[i].addEventListener("click", function () {
            update_order(button_order, elements[i])
            display(output, text, elements)
+           clearActive(elements)
        });
    }
 }
