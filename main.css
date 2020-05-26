@@ -6,7 +6,7 @@ button {
     table-layout: fixed;
     border-collapse: collapse;
     font-size: 25px;
-    font-family: fantasy;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 button:hover {
@@ -36,9 +36,9 @@ input {
     height: 40px;
     margin-top: 10px;
     margin-bottom: 10px;
-    font-family: fantasy;
     font-size: 35px;
     text-align: right;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 table {
@@ -47,4 +47,10 @@ table {
 
 .active {
     background-color: red;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        display: ;
+    }
 }
